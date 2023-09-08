@@ -1,0 +1,79 @@
+name: Bug Report
+description: Create a bug report to help us improve
+title: "[BUG] "
+labels: ["bug", "needs verification"]
+body:
+  - type: markdown
+    attributes:
+      value: "
+        # Bug Report
+
+        Thanks for taking the time to fill out this bug report! To help us verify the issue quicker, please include as much information as you can.
+        
+        
+        ---
+        
+        
+        FMTC is a large, platform-dependent package, and there's only one person running manual tests on it before releases, so your support is appreciated.
+        
+        > If you are using FMTC in a proprietary project, please read and understand [this important legal notice](https://fmtc.jaffaketchup.dev/#proprietary-licensing) on the topic of licensing. Please get in touch if you would like more information!
+        
+        
+        ---
+        
+        
+        Before reporting a bug, please:
+
+        * Check if there is already an open or closed issue that is similar to yours
+        
+        * Ensure that your Flutter environment is correctly installed & set-up
+        
+        * Ensure that this package, 'flutter_map', and any modules are correctly installed & set-up
+        
+        
+        ---
+        "
+  - type: textarea
+    id: details
+    attributes:
+      label: What is the bug?
+      description: What were you implementing when you found this issue? What happens when the bug triggers? What do you think should have happened instead? Please include as much detail as possible, including screenshots and screen-recordings if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can we reproduce it?
+      description: |
+        Please include a fully formatted [minimal reproducible example](https://en.wikipedia.org/wiki/Minimal_reproducible_example) wrapped in a [Dart code block](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting), otherwise, detail the exact steps to reproduce this issue.
+        If you do not include any information here, it will take longer for us to verify your issue.   
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Do you have a potential solution?
+      description: "If so, please detail it: it will make it quicker for us to fix the issue."
+  - type: markdown
+    attributes:
+      value: ---
+  - type: input
+    id: platform
+    attributes:
+      label: Platforms
+      description: Please detail the devices and operating systems you can reproduce this bug on, separated by commas.
+      placeholder: eg. Android 13 (Samsung Galaxy S99), Windows 11 (x64)
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How much of a problem is this issue, when it does occur?
+      options:
+        - "Minimum: Allows normal functioning"
+        - "Obtrusive: Prevents normal functioning but causes no errors in the console"
+        - "Erroneous: Prevents normal functioning and causes errors in the console"
+        - "Fatal: Causes the application to crash"
+    validations:
+      required: true

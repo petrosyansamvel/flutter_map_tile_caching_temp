@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Official 'flutter_map' Discord Server
+    url: https://discord.gg/egEGeByf4q
+    about: Need more generalised help? Join the Discord server, which has a dedicated channel for plugins!
